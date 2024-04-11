@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do tempo</title>
+    <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="confira-a-previsao-do-tempo-para-este-final-de-semana-em-divinopolis-1-696x490.jpg" type="image/x-icon">
+
+    <link rel="manifest" href="manifest.json">
+
+    <script src="scripts.js"></script>
+
+    <link rel="shortcut icon" href="552448.png" type="image/x-icon">
+
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="caixa-maior">
+
+        <input class="input-cidade" placeholder="Digite o nome da cidade: ">
+        <button class="botao-buscar" onclick="cliqueiNoBotao()">
+            <img class="img-buscar" src="https://www.svgrepo.com/show/488200/find.svg" alt="busca">
+        </button>
+
+        <div class="caixa-media">
+            <h2 class="cidade">Tempo em Recife</h2>
+            <p class="temp">28°C</p>
+
+            <div class="caixa-menor">
+             <img class="img-previsao" alt="Icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png"> <p  class="texto-previsao">Ensolarado</p>
+            </div>
+            <p class="umidade">Umidade: 81%</p>
+        </div>
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js')
+                        .then(registration => {
+                            console.log('Service Worker registered with scope:', registration.scope);
+                        })
+                        .catch(error => {
+                            console.log('Service Worker registration failed:', error);
+                        });
+                });
+            }
+        </script>
+        
+</body>
+</html>
